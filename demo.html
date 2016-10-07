@@ -1,0 +1,15 @@
+
+<div class="custom-post-slider">
+       {% if content.widgets.nav_toggle_slider.body.value == true %}
+           {% image_slider "image_slider" %}
+       {% endif %}
+       {% if content.widgets.nav_toggle_slider.body.value == false %}
+           {% if content.post_list_summary_featured_image %}
+                   <div class="hs-featured-image-wrapper">
+                       <a href="{{content.absolute_url}}" title="" class="hs-featured-image-link">
+                           <img src="{{ content.post_list_summary_featured_image }}" class="hs-featured-image">
+                       </a>
+                   </div>
+               {% endif %}
+           {% endif %}
+       </div>
